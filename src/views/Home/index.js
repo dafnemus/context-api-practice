@@ -1,3 +1,12 @@
+import { useContext, useEffect } from 'react';
+import PokemonContext from '../../context/pokemons';
+
 export default function Home() {
-  return <h1>Hola</h1>;
+  const { showAlert } = useContext(PokemonContext);
+
+  useEffect(() => {
+    showAlert();
+  }, []);
+
+  return <h1>Home</h1>;
 }
