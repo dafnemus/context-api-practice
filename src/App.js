@@ -1,10 +1,13 @@
-import './App.css';
+import PokemonProvider from './context/pokemons/Provider';
 import Routes from './routes';
+import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Routes />
+      <PokemonProvider>
+        <Routes />
+      </PokemonProvider>
     </div>
   );
 }
